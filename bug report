@@ -1,0 +1,53 @@
+1 The incorrect original code or code snippit that you wrote: //code with bugs or code snippet with bug goes here 
+Solution: There is no incorrect code. 
+2 What bug does the original code have? 
+Solution: NO bug
+3 What misunderstanding of C++ concepts lead you to this incorrect code? 
+Solution: There is no misunderstanding.
+4 How to correct the bug? 
+Solution: I tried and did the correct code.
+5 The corresponding bug-free code or code snippet is:
+#include<iostream>
+	using namespace std;
+	
+
+	void func(int array[], int size, int n)
+	{
+	        for(int i = 0;i < size;i++)
+	        {
+	                if( array[i] > n)
+	                        cout << array[i] << ' ';
+	        }
+	        cout << '\n';
+	}
+	
+
+	int main()
+	{
+	        // first test case
+	        cout << "test case 1: ";
+	        int size1 = 5, n1 = 3;
+	        int array1[size1];
+	        array1[0] = 1; 
+	        array1[1] = 2; 
+	        array1[2] = 3; 
+	        array1[3] = 4;
+	        array1[4] = 5;
+	        // calling the function
+	        func(array1, size1, n1);
+	        
+	       // second test case
+	        cout << "test case 2: ";
+	        int size2 = 7, n2 = 8;
+	        int array2[size2];
+	        array2[0] = 5; 
+	        array2[1] = 4; 
+	        array2[2] = 7; 
+	        array2[3] = 10;
+	        array2[4] = 11;
+	        array2[5] = 9; 
+	        array2[6] = 14;
+	        func(array2, size2, n2);
+	}
+
+
